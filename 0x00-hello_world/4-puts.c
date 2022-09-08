@@ -2,7 +2,8 @@
 
 /*A program that prints 'Programming
  * is like building a multilingual puzzle',
- * followed by a new line.*/
+ * followed by a new line.
+ */
 
 int main(void)
 
@@ -11,5 +12,5 @@ int main(void)
 
 	puts(statement);
 
-	return 0;
+	return (0);
 }
