@@ -6,7 +6,7 @@
  * followed by a new line.
  */
 
-int main(void)
+int main(void) /*Entry point*/
 {
 	char statement[] = "\"Programming is like building a multilingual puzzle";
 
