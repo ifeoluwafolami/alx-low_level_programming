@@ -8,9 +8,6 @@
 
 int main(void) /*Entry point*/
 {
-	char statement[] = "\"Programming is like building a multilingual puzzle";
-
-	puts(statement);
-
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
