@@ -1,13 +1,8 @@
 #include<stdio.h>
 
-/*
- * A program that prints 'Programming
- * is like building a multilingual puzzle',
- * followed by a new line.
- */
-
 /**
- * Puts returns the string, exactly as is.
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
