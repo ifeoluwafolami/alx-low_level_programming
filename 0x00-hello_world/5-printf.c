@@ -5,8 +5,8 @@
  *
  * Return: Always 0 (Success)
  */
-void main()
+int main(void)
 {
 	char statement[] = "with proper grammar, but the outcome is a piece of art";
-	printf("%s\n", statement)
+	printf("%s\n", statement);
 }
