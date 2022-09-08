@@ -7,7 +7,6 @@
  */
 
 int main(void)
-
 {
 	char statement[] = "\"Programming is like building a multilingual puzzle";
 
