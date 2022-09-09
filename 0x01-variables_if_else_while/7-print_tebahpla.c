@@ -9,7 +9,7 @@ int main(void)
 	char ch[] = "abcdefghijklmnopqrstuvwxyz";
 	int i;
 
-	for (i = 0; i <= 26; i++)
+	for (i = 1; i <= 26; i++)
 	{
 		putchar(ch[(26 - i)]);
 	}
