@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Entry point
@@ -6,9 +6,6 @@
  */
 int main(void)
 {
-	char pchar[] = "_putchar";
-
-	printf("%s\n", pchar);
-
+	write(0, "_putchar\n", 16);
 	return (0);
 }
