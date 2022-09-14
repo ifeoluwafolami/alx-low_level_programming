@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * print_times_table - prints the time table of an integer n,
- * starting with 0
+ * print_times_table - prints the time table of an integer n
  * @n: integer being processed
  */
 void print_times_table(int n)
@@ -15,31 +14,31 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				prod = i * j;
-				if (prod < 10)
-				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(prod + '0');
-				}
-				else
-				{
-					if ((prod >= 10) && (prod < 100))
-					{
-						_putchar(' ');
-						_putchar((prod / 10) + '0');
-						_putchar((prod % 10) + '0');
-					}
-					else
-					{
-						_putchar((prod / 100) + '0');
-						_putchar(((prod / 10) % 10) + '0');
-						_putchar(((prod % 100) % 10) + '0');
-					}
-				}
-				if (j != n)
+				if (prod != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
+				}
+				if (prod < 10)
+				{
+					if (prod != 0)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
+					_putchar(prod + '0');
+				}
+				else if ((prod >= 10) && (prod < 100))
+				{
+					_putchar(' ');
+					_putchar((prod / 10) + '0');
+					_putchar((prod % 10) + '0');
+				}
+				else
+				{
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10) % 10) + '0');
+					_putchar(((prod % 100) % 10) + '0');
 				}
 			}
 			_putchar('\n');
