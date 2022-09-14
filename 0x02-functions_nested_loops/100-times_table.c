@@ -19,13 +19,10 @@ void print_times_table(int n)
 					_putchar(',');
 					_putchar(' ');
 				}
-				if (prod < 10)
+				if ((prod < 10) && (j != 0))
 				{
-					if (prod != 0)
-					{
-						_putchar(' ');
-						_putchar(' ');
-					}
+					_putchar(' ');
+					_putchar(' ');
 					_putchar(prod + '0');
 				}
 				else if ((prod >= 10) && (prod < 100))
