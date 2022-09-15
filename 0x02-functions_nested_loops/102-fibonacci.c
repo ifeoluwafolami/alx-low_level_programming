@@ -5,17 +5,17 @@
  */
 int main(void)
 {
-	int i = 1, j = 2, k;
+	long i = 1, j = 2, k;
 
 	for (k = 0; k < 50; k++)
 	{
 		if (k == 0)
 		{
-			printf("%i, ", i);
+			printf("%ld, ", i);
 		}
 		else if (k == 1)
 		{
-			printf("%i, ", j);
+			printf("%ld, ", j);
 		}
 		else
 		{
@@ -23,11 +23,11 @@ int main(void)
 			i = j - i;
 			if (k != 49)
 			{
-				printf("%i, ", j);
+				printf("%ld, ", j);
 			}
 			else
 			{
-				printf("%i\n", j);
+				printf("%ld\n", j);
 			}
 		}
 	}
