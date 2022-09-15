@@ -10,12 +10,12 @@ int main(void)
 
 	while (j < 4000000)
 	{
-		j += i;
-		i = j - i;
 		if ((j % 2) == 0)
 		{
 			sum += j;
 		}
+		j += i;
+		i = j - i;
 	}
 	printf("%ld\n", sum);
 	return (0);
