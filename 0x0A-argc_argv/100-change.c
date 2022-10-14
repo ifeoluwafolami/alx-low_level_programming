@@ -17,8 +17,6 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	money = atoi(argv[1]);
-	if (money <= 0)
-		printf("%d\n", 0);
 	while (money > 0)
 	{
 		if (money >= 25)
