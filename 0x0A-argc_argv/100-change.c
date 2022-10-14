@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int money, coins;
+	int money, coins = 0;
 
 	if (argc != 2)
 	{
