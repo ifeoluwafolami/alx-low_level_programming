@@ -5,14 +5,16 @@
  */
 void print_number(int n)
 {
-	int i, j, k, pow;
+	int i, j, k, pow, l;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		l = n * -1;
 	}
-	j = n;
+	else
+		l = n;
+	j = l;
 	pow = 1;
 	for (i = 0; j >= 10; i++)
 	{
@@ -21,9 +23,9 @@ void print_number(int n)
 	}
 	for (; pow >= 1; pow /= 10)
 	{
-		k = n / (pow);
+		k = ((l / pow) % 10);
 		_putchar(k + '0');
-		n -= (k * (pow));
+		l -= (k * (pow));
 		i--;
 	}
 }
