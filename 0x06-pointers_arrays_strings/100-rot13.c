@@ -6,23 +6,22 @@
  */
 char *rot13(char *a)
 {
-	int i = 0;
-
-	while (a[i] != '\0')
+	int i, j;
+	char alp[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char enc[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	
+	for (i = 0; a[i] != '\0'; i++)
 	{
-		while ((a[i] >= 'a' && a[i] <= 'z') ||
-				(a[i] >= 'A' && a[i] <= 'Z'))
+		j = 0;
+		while (alp[j] != '\0')
 		{
-			if ((a[i] >= 'a' && a[i] <= 'm') ||
-					(a[i] >= 'A' && a[i] <= 'M'))
+			if (alp[j] == a[i])
 			{
-				a[i] += 13;
+				a[i] = enc[j];
+				break;
 			}
-			else
-				a[i] -= 13;
-			i++;
+			j++;
 		}
-		i++;
 	}
 	return (a);
 }
