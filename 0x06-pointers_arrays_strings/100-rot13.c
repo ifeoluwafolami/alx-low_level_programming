@@ -9,7 +9,7 @@ char *rot13(char *a)
 	int i, j;
 	char alp[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char enc[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	
+
 	for (i = 0; a[i] != '\0'; i++)
 	{
 		j = 0;
