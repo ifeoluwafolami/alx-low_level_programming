@@ -5,7 +5,7 @@
  */
 void print_number(int n)
 {
-	int i, j, k, pow, l;
+	unsigned int i, j, k, pow, l;
 
 	if (n < 0)
 	{
@@ -16,7 +16,7 @@ void print_number(int n)
 		l = n;
 	j = l;
 	pow = 1;
-	for (i = 0; j >= 10; i++)
+	for (i = 0; j > 9; i++)
 	{
 		j /= 10;
 		pow *= 10;
