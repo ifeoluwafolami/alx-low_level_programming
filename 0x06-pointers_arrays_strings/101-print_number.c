@@ -25,7 +25,6 @@ void print_number(int n)
 	{
 		k = ((l / pow) % 10);
 		_putchar(k + '0');
-		l -= (k * (pow));
 		i--;
 	}
 }
