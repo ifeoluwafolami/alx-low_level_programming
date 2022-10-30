@@ -5,31 +5,28 @@
  */
 void print_number(int n)
 {
+	int i, j = n, k, l, pow;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		j *= -1;
 	}
-	if ((n >= 0) && (n < 10))
-	{
-		_putchar(n + '0');
-	}
-	else if ((n >= 10) && (n < 100))
-	{
-		_putchar((n / 10) + '0');
-		_putchar((n % 10) + '0');
-	}
-	else if ((n >= 100) && (n < 1000))
-	{
-		_putchar((n / 100) + '0');
-		_putchar(((n % 100) / 10) + '0');
-		_putchar(((n % 100) % 10) + '0');
-	}
+	for (i = 0; j >= 10; i++)
+		j /= 10;
+	if (n < 0)
+		j = -n;
 	else
+		j = n;
+	while (i >= 0)
 	{
-		_putchar((n / 1000) + '0');
-		_putchar(((n % 1000) / 100) + '0');
-		_putchar((((n % 1000) % 100) / 10) + '0');
-		_putchar((((n % 1000) % 100) % 10) + '0');
+		l = i;
+		pow = 1;
+		for (; l > 0; l--)
+			pow *= 10;
+		k = j / pow;
+		_putchar(k + '0');
+		j -= (k * pow);
+		i--;
 	}
 }
