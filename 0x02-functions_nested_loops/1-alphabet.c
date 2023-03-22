@@ -9,5 +9,5 @@ void print_alphabet(void)
 
 	for (i = 0; alph_low[i] != '\0'; i++)
 		_putchar(alph_low[i]);
-	_putchar("\n");
+	_putchar('\n');
 }
