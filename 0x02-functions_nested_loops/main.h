@@ -14,4 +14,5 @@ void times_table(void);
 int add(int m, int n);
 void print_to_98(int n);
 void print_time_table(int n);
+int _putchar(char c);
 #endif /*MAIN_H*/
