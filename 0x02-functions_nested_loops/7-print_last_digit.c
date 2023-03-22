@@ -1,0 +1,15 @@
+#include "main.h"
+/**
+ * print_last_digit - prints last digit of number
+ * @n: number
+ * Return: last digit
+ */
+int print_last_digit(int n)
+{
+	int a;
+
+	if (n < 1)
+		n *= -1;
+	a = n % 10;
+	return (a);
+}
