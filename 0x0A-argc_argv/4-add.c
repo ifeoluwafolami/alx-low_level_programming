@@ -12,22 +12,27 @@
  */
 int main(int argc, char *argv[])
 {
-	int num, digit, sum = 0;
+	long int sum;
+	int i;
+	int j;
 
-	for (num = 1; num < argc; num++)
+	(void)argv;
+	sum = 0;
+	if (argc > 1)
 	{
-		for (digit = 0; argv[num][digit]; digit++)
+		for (i = 1; i < argc; i++)
 		{
-			if (argv[num][digit] < '0' || argv[num][digit] > '9')
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				printf("Error\n");
-				return (1);
+				if (!(isdigit(argv[i][j])))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
+			sum += atoi(argv[i]);
 		}
-
-		sum += atoi(argv[num]);
 	}
-
-	printf("%d\n", sum);
-
+	printf("%ld\n", sum);
 	return (0);
+}
